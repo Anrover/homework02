@@ -10,10 +10,10 @@ class ComplexNumberSpec extends FlatSpec with Matchers {
     val complexNumber4 = new ComplexNumber(5, 5)
 
     complexNumber1 == complexNumber4 should be (false)
-    complexNumber1 == complexNumber3 should be (true)
+    complexNumber1 == complexNumber1 should be (true)
+    complexNumber1 == complexNumber2 should be (true)
     complexNumber2 == complexNumber3 should be (true)
     complexNumber1 == complexNumber3 should be (true)
-    complexNumber2 == complexNumber2 should be (true)
     complexNumber1 == null should be (false)
   }
   it should "correct multiply" in
