@@ -29,7 +29,7 @@ class ComplexNumberSpec extends FlatSpec with Matchers {
     complexNumber3 * complexNumber4 should be (new ComplexNumber(-76, -42))
     complexNumber1 * complexNumber5 should be (new ComplexNumber(0, 0))
   }
-  it should "correctly add-up" in
+  it should "correctly add" in
   {
     val complexNumber1 = new ComplexNumber(5, -6)
     val complexNumber2 = new ComplexNumber(-3, 2)
