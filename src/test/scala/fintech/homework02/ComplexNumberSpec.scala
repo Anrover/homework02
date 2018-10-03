@@ -2,7 +2,7 @@ package fintech.homework02
 import org.scalatest.{FlatSpec, Matchers}
 
 class ComplexNumberSpec extends FlatSpec with Matchers {
-  "A ComplexNumber" should "correctly compare" in
+  "A ComplexNumber" should "correct compare" in
   {
     val complexNumber1 = new ComplexNumber(7, 3)
     val complexNumber2 = new ComplexNumber(7.0, 3)
@@ -16,7 +16,7 @@ class ComplexNumberSpec extends FlatSpec with Matchers {
     complexNumber2 == complexNumber2 should be (true)
     complexNumber1 == null should be (false)
   }
-  it should "correctly multiply" in
+  it should "correct multiply" in
   {
 
     val complexNumber1 = new ComplexNumber(7, 3)
@@ -29,7 +29,7 @@ class ComplexNumberSpec extends FlatSpec with Matchers {
     complexNumber3 * complexNumber4 should be (new ComplexNumber(-76, -42))
     complexNumber1 * complexNumber5 should be (new ComplexNumber(0, 0))
   }
-  it should "correctly add" in
+  it should "correct sum" in
   {
     val complexNumber1 = new ComplexNumber(5, -6)
     val complexNumber2 = new ComplexNumber(-3, 2)
@@ -38,7 +38,7 @@ class ComplexNumberSpec extends FlatSpec with Matchers {
     complexNumber1 + complexNumber2 should be (new ComplexNumber(2, -4))
     complexNumber1 + complexNumber3 should be (complexNumber1)
   }
-  it should "correctly raised to a power" in
+  it should "correct raise to a power" in
   {
     val complexNumber = new ComplexNumber(0.5, Math.sqrt(3)/2)
     val power: Int = 20
@@ -48,7 +48,7 @@ class ComplexNumberSpec extends FlatSpec with Matchers {
     (result.real - correctResult.real).abs should be < calculationError
     (result.imag - correctResult.imag).abs should be < calculationError
   }
-  it should "correctly displayed" in
+  it should "correct display" in
   {
     val complexNumber = new ComplexNumber(7, 3)
     complexNumber.toString should be ("Complex(7.0, 3.0i)")
